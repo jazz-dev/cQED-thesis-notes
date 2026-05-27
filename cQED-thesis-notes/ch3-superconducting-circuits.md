@@ -8,7 +8,7 @@
 
 ## Core idea
 
-This chapter builds the theory from the ground up using circuit language — starting with a capacitor and an inductor, ending with the full Jaynes-Cummings Hamiltonian derived from first principles. The goal is to connect electrical engineering intuition to quantum optics. If Chapter 2 gave you the physics, Chapter 3 gives you the hardware.
+This chapter builds the theory from the ground up using circuit language starting with a capacitor and an inductor, ending with the full Jaynes-Cummings Hamiltonian derived from first principles. The goal is to connect electrical engineering intuition to quantum optics. If Chapter 2 gave you the physics, Chapter 3 gives you the hardware.
 
 ---
 
@@ -22,7 +22,7 @@ Start with a simple parallel LC circuit (inductor L, capacitor C, resistor R for
 ω₀ = 1/√(LC)
 ```
 
-with decay rate κ = 2/RC. The quality factor Q = ω₀RC is the number of oscillations before the energy decays — the higher, the better for a cavity.
+with decay rate κ = 2/RC. The quality factor Q = ω₀RC is the number of oscillations before the energy decays: the higher, the better for a cavity.
 
 ### From lumped elements to transmission line
 
@@ -35,7 +35,7 @@ A **coplanar waveguide (CPW)** resonator is a flat strip of superconducting meta
 
 The ratio s/a determines the characteristic impedance Z₀ (designed to be ~50 Ω to match standard microwave equipment). The 1D geometry is key: by compressing the field into a narrow channel, the energy density is ~10⁶ times higher than a 3D microwave cavity.
 
-**Gaps at both ends** of the centre conductor act as microwave mirrors — small capacitors that reflect most incident power but transmit a little. The quality factor from these coupling capacitors:
+**Gaps at both ends** of the centre conductor act as microwave mirrors, small capacitors that reflect most incident power but transmit a little. The quality factor from these coupling capacitors:
 
 ```
 Q_ext = nπ/(2q²)   where q = ωCᵢₙZ₀
@@ -67,7 +67,7 @@ This zero-point voltage is what couples to the qubit. It's small (~µV) but real
 
 ### Superconductor-specific physics: kinetic inductance
 
-In a normal metal, inductance comes from magnetic field energy. In a superconductor, there's an additional contribution from the kinetic energy of the Cooper pair condensate — **kinetic inductance** L_K ∝ λ_L² (where λ_L is the London penetration depth). This makes the resonant frequency temperature-dependent and sensitive to magnetic field — important for characterising the device (Ch. 7) and for understanding systematic drifts.
+In a normal metal, inductance comes from magnetic field energy. In a superconductor, there's an additional contribution from the kinetic energy of the Cooper pair condensate, **kinetic inductance** L_K ∝ λ_L² (where λ_L is the London penetration depth). This makes the resonant frequency temperature-dependent and sensitive to magnetic field — important for characterising the device (Ch. 7) and for understanding systematic drifts.
 
 ---
 
@@ -75,7 +75,7 @@ In a normal metal, inductance comes from magnetic field energy. In a superconduc
 
 ### Why you need non-linearity
 
-A harmonic oscillator has equally spaced energy levels. If you try to use it as a qubit, any microwave drive that hits the 0→1 transition also hits 1→2, 2→3, etc. You can't selectively address just two levels. You need **anharmonicity** — unequally spaced levels. This comes from the Josephson junction.
+A harmonic oscillator has equally spaced energy levels. If you try to use it as a qubit, any microwave drive that hits the 0→1 transition also hits 1→2, 2→3, etc. You can't selectively address just two levels. You need **anharmonicity** , unequally spaced levels. This comes from the Josephson junction.
 
 ### The Josephson junction
 
@@ -138,7 +138,7 @@ where Φ₀ = h/2e is the superconducting flux quantum. This gives a second knob
 
 ## Part 3: Coupling qubit to cavity — deriving g
 
-This is the most satisfying part of the chapter. The Jaynes-Cummings Hamiltonian is not assumed — it falls out naturally from circuit physics.
+This is the most satisfying part of the chapter. The Jaynes-Cummings Hamiltonian is not assumed, it falls out naturally from circuit physics.
 
 ### Where the coupling comes from
 
@@ -164,7 +164,7 @@ with V₀ = √(ℏωᵣ/2C) the rms vacuum voltage in the cavity, and β = Cₘ
 
 ### Rotating wave approximation
 
-The full coupling has terms like a†σ⁺ (create a photon *and* excite the qubit simultaneously) and aσ⁻ (annihilate a photon *and* de-excite the qubit) — these don't conserve the number of excitations and are rapidly oscillating. When ωᵣ + ωₐ ≫ g, |ωᵣ - ωₐ| (always satisfied here), these terms average to zero. Dropping them (the rotating wave approximation) gives:
+The full coupling has terms like a†σ⁺ (create a photon *and* excite the qubit simultaneously) and aσ⁻ (annihilate a photon *and* de-excite the qubit), these don't conserve the number of excitations and are rapidly oscillating. When ωᵣ + ωₐ ≫ g, |ωᵣ - ωₐ| (always satisfied here), these terms average to zero. Dropping them (the rotating wave approximation) gives:
 
 ```
 H_coupling = ℏg(a†σ⁻ + aσ⁺)
@@ -188,7 +188,7 @@ g/ωᵣ ~ β × √(2 × 50/25800) ~ β × 6%
 
 With β engineered close to 1, maximum g/ωᵣ ~ 1–10%.
 
-Remarkably, the **fine structure constant α = η₀/R_K ≈ 1/137** appears in this formula — the fundamental constant measuring the strength of electromagnetic coupling in nature, showing up in a circuit equation.
+Remarkably, the **fine structure constant α = η₀/R_K ≈ 1/137** appears in this formula, the fundamental constant measuring the strength of electromagnetic coupling in nature, showing up in a circuit equation.
 
 **Why this is huge:** In 3D atomic cavity QED, g/ω ~ 10⁻⁷. In circuit QED, g/ω ~ 10⁻². That's five orders of magnitude larger. This is what allows circuit QED to reach strong coupling despite the noisy solid-state environment.
 
