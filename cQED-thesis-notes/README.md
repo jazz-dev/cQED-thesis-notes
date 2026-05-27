@@ -18,7 +18,7 @@ I'm reading this as part of building background in quantum measurement and contr
 ## Why Schuster 2007
 
 - It is the primary experimental paper for circuit QED as a platform
-- The transmon qubit — invented here — is used in IBM, Google, and most other superconducting quantum computers today
+- The transmon qubit, invented here, is used in IBM, Google, and most other superconducting quantum computers today
 - The dispersive readout scheme introduced here is still the dominant measurement technique in the field
 - It is unusually well-written for a physics thesis, Schuster explains intuition, not just equations
 
