@@ -2,7 +2,7 @@
 
 **Pages:** 18–33  
 **Reading time:** ~30 min  
-**Status:** ✅ Done
+**Status:**  Done
 
 ---
 
